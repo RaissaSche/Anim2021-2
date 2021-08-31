@@ -9,7 +9,7 @@ public class BezierFollow : MonoBehaviour
 
     private int routeToGo;
     private float tParam;
-    private Vector2 objectPosition;
+    private Vector3 objectPosition;
     private float speedModifier;
     private bool coroutineAllowed;
 
@@ -35,10 +35,10 @@ public class BezierFollow : MonoBehaviour
     {
         coroutineAllowed = false;
 
-        Vector2 p0 = routes[routeNum].GetChild(0).position;
-        Vector2 p1 = routes[routeNum].GetChild(1).position;
-        Vector2 p2 = routes[routeNum].GetChild(2).position;
-        Vector2 p3 = routes[routeNum].GetChild(3).position;
+        Vector3 p0 = routes[routeNum].GetChild(0).position;
+        Vector3 p1 = routes[routeNum].GetChild(1).position;
+        Vector3 p2 = routes[routeNum].GetChild(2).position;
+        Vector3 p3 = routes[routeNum].GetChild(3).position;
 
         while(tParam < 1)
         {
